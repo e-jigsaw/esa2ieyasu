@@ -1,0 +1,11 @@
+{
+  "name": "esa2ieyasu",
+  "version": "1.0.0",
+  "description": "esa -> ieyasu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jigsaw (http://jgs.me)",
+  "license": "MIT"
+}
