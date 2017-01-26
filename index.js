@@ -26,10 +26,12 @@ button.addEventListener('click', event => {
         }
       })
       const {posts} = await res.json()
-      const [startTime, endTime] =
+      const candidates =
         posts[0].body_md.split('\n')
-        .filter(row => /^\|\sオフィス\s\|/.test(row))[0]
-        .replace(/\s/g, '').split('|')[2].split('-')
+        .filter(row => /^\|\sオフィス\s\|/.test(row))
+        .map(row => row.replace(/\s/g, '').split('|')[2].split('-'))
+      const startTime = candidates[0][0]
+      const endTime = candidates[candidates.length - 1][1]
       startTimeInput.value = startTime
       endTimeInput.value = endTime
       const startTimeNum = parseInt(startTime.split(':')[0])
