@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "esa2ieyasu",
   "description": "esa -> ieyasu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "jigsaw (http://jgs.me)",
   "content_scripts": [
     {
