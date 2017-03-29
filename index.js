@@ -10,10 +10,10 @@ button.addEventListener('click', event => {
   const targetDate =
     tds[0]
       .textContent.replace(/\s/g, '').split('/').map(str => str.split('(')[0])
-  const startTimeInput = tds[2].children[0]
-  const endTimeInput = tds[3].children[0]
-  const restStartInput = tds[4].children[0]
-  const restEndInput = tds[5].children[0]
+  const startTimeInput = document.getElementById('work_start_at_str')
+  const endTimeInput = document.getElementById('work_end_at_str')
+  const restStartInput = document.getElementById('work_break_1_start_at_str')
+  const restEndInput = document.getElementById('work_break_1_end_at_str')
   chrome.storage.local.get(
     ['team', 'token', 'screenName'],
     async ({team, token, screenName}) => {
